@@ -2,8 +2,8 @@
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
-    "username": "kim",
-    "password": "",
+    "username": "postgres",
+    "password": "kimanfast11",
     "database": "waffle",
     "entities": [
         "src/entity/*.js"
