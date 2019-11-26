@@ -1,0 +1,25 @@
+<h2>User List</h2>
+<h3>Register</h3>
+<div>
+  <label>이름:
+    <input #heroName />
+  </label>
+  <br>
+  <label>전공:
+    <input #heroMajor />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(heroName.value,heroMajor.value); heroName.value='';heroMajor.value=''">
+    add
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}} / {{hero.major}}
+    </a>
+    <button class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
+  </li>
+</ul>
